@@ -1,0 +1,292 @@
+//this is my new style sheet
+
+
+  /* left side */
+  .sidenav {
+    padding-top: 40px;
+    background-color: #F8F9F9;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // height: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    // font-weight: bold;
+  }
+  .top-menu{
+    top: 30px;
+  }
+  .name-pic{
+    height: 60px;
+padding-top: 5px;
+  }
+
+ 
+
+
+// new menu with sub 
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* define a fixed width for the entire menu */
+.navigation {
+width: 300px;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+display: block;
+background-color: #F8F9F9;
+text-decoration: none;
+padding: 10px;
+color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+  background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+display the submenu inside it.
+we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+display: block;
+max-height: 200px;
+}
+
+/*
+we now overwrite the background-color for .submenu links only.
+CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+background-color: #F8F9F9;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+overflow: hidden;
+max-height: 0;
+transition: all 0.5s ease-out;
+}
+
+
+
+//===================================================================
+
+  // right side
+  // .right-side{ margin-left: 400px;}
+ 
+
+
+  .img-head-overly{
+    position: relative;
+      margin-bottom: 20px;
+      height: 200px;
+      width: 100%;
+  }// 2-perent
+  .img-header{
+    position: absolute;
+   
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    z-index: 1;
+    width: 100%;
+  }
+  .head-overly{
+    background-color: black;
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  .header-title{
+    position: absolute;
+  bottom: 10px;
+  left: 30px;
+  font-size: 25px;
+  z-index: 3;
+  color: #fff;
+  }
+
+  .content-right{
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+  
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+
+
+
+  // table style and button
+
+  .row-list{
+    width: auto;
+    height: 100%;
+margin-bottom: 20px;
+padding-bottom: 10px;
+font-size: 18px;
+  }
+
+  .create-modal.btn.btn-sm.btn-primary {
+
+    font-size: 14px;
+
+}
+
+
+  // =======================================================
+  //  custom checkbox style
+
+  /* The customcheck */
+.customcheck {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.customcheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.customcheck:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.customcheck input:checked ~ .checkmark {
+  background-color: #02cf32;
+  border-radius: 50%;
+
+}
+// .customcheck input:checked ~ .todo-text{
+//   text-decoration: line-through;
+
+// }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.customcheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.customcheck .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+// create new task modal style
+
+.close{font-size: 18px;font-weight: bold;}
+.modal-title{font-size: 14px; font-weight: bold;}
+.modal-content{
+
+
+  width: 750px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+}
+.form-control{
+  font-size: 1.3rem;
+}
+
+
+
+
+
+
+// index.php style
+// ====================================
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+
+// day index table size
+.daybody{font-size: 18px; display: inline;}
+
