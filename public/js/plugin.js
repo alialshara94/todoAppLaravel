@@ -87,11 +87,11 @@ $(document).ready(function () {
 				data: { id: date_id },
 				success: function (response) {
 					// console.log(response);
-					
+
 					// $('body').find('.modal-body').append('<p>Title : ' + title + '</p>');
-					response.forEach(function(data) {
-					// alert(	data.title);
-					$('body').find('.daybody').find("tbody").append('  <tr class="datarow"> <td>'+data.id+'</td> <td>'+data.title+'</td> <td>'+data.content+'</td> <td>'+data.status+'</td> <td>'+data.start_date+'</td> <td>'+data.end_date+'</td> </tr> '
+					response.forEach(function (data) {
+						// alert(	data.title);
+						$('body').find('.daybody').find("tbody").append('  <tr class="datarow"> <td>' + data.id + '</td> <td>' + data.title + '</td> <td>' + data.content + '</td> <td>' + data.status + '</td> <td>' + data.start_date + '</td> <td>' + data.end_date + '</td> </tr> '
 						);
 					});
 
